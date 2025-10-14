@@ -8,9 +8,9 @@ import os
 def load_model(model_name: str):
     """Load either SRCNN or SRGAN model."""
     if model_name == "SRCNN":
-        model_path = "models/srcnn/srcnn_best.pt"
+        model_path = "models/srcnn/srcnn_complete_model.pt"
     else:
-        model_path = "models/srgan/srgan_generator_best.pt"
+        model_path = "models/srgan/srgan_generator_complete_model.pt"
     
     model = torch.load(model_path, map_location="cpu")
     model.eval()
@@ -40,7 +40,7 @@ def enhance_image(model, input_image):
 
 st.set_page_config(page_title="Super-Resolution GUI", page_icon="🔍", layout="centered")
 
-st.title("🔍 Image Super-Resolution")
+st.title("Image Super-Resolution")
 st.write("Upload a low-resolution image and choose a model to enhance it.")
 
 uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
