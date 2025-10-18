@@ -13,8 +13,8 @@ A minimal Streamlit GUI prototype for enhancement of low-resolution images.
 
 | Metric | SRCNN | SRGAN |
 |:-------|:------:|:------:|
-| **PSNR (dB)** | 35.91 | **36.07** |
-| **SSIM** | 0.8754 | **0.8779** |
+| **PSNR (dB)** | 35.91 | 36.07 |
+| **SSIM** | 0.8754 | 0.8779 |
 
 
 **SRGAN performs slightly better** than SRCNN in both **PSNR** and **SSIM**, indicating improved perceptual and reconstruction quality.
@@ -42,10 +42,10 @@ streamlit run app.py
 
 ## Visuals
 
-![LR / SR / HR comparison](results\SRCNN_visual_comparison.png)  
-![SRGAN comparison](results\SRGAN_visual_comparison.png)  
-![Example butterfly - original](results\SRCNN-gui.png)  
-![Example butterfly - srgan](results\SRGAN-gui.png)
+![LR / SR / HR comparison](results/SRCNN_visual_comparison.png)  
+![SRGAN comparison](results/SRGAN_visual_comparison.png)  
+![Example butterfly - original](results/SRCNN-gui.png)  
+![Example butterfly - srgan](results/SRGAN-gui.png)
 
 
 
