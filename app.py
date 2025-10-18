@@ -77,9 +77,9 @@ if uploaded_file is not None:
 
         col1, col2 = st.columns(2)
         with col1:
-            st.image(image, caption="Original Image", use_container_width=True)
+            st.image(image, caption="Original Image", width='stretch')
         with col2:
-            st.image(enhanced_image, caption=f"Enhanced Image ({model_choice})", use_container_width=True)
+            st.image(enhanced_image, caption=f"Enhanced Image ({model_choice})", width='stretch')
 
         enhanced_image.save("enhanced_output.png")
         with open("enhanced_output.png", "rb") as f:
@@ -90,4 +90,4 @@ if uploaded_file is not None:
                 mime="image/png"
             )
     else:
-        st.image(image, caption="Uploaded Image Preview", use_container_width=True)
+        st.image(image, caption="Uploaded Image Preview", width='stretch')
