@@ -38,9 +38,11 @@ def load_model(model_name: str):
     return model
 
 
-def preprocess_image(image: Image.Image):
+def preprocess_image(image: Image.Image, scale_factor=4):
+    w, h = image.size
+    upsampled = image.resize((w * scale_factor, h * scale_factor), Image.BICUBIC)
     transform = transforms.Compose([transforms.ToTensor()])
-    return transform(image).unsqueeze(0)
+    return transform(upsampled).unsqueeze(0)
 
 
 def postprocess_image(tensor):
@@ -53,7 +55,7 @@ def enhance_image(model, input_image):
         return model(input_image)
 
 
-st.set_page_config(page_title="Super-Resolution GUI", page_icon="🔍", layout="centered")
+st.set_page_config(page_title="Super-Resolution", page_icon="🔍", layout="centered")
 
 st.title("Image Super-Resolution")
 st.write("Upload a low-resolution image and enhance it using SRCNN or SRGAN.")
