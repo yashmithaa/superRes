@@ -1,4 +1,6 @@
 # superRes
+[click here for final report](report.pdf)
+
 Image super-resolution (SR) using convolutional neural networks (SRCNN) and a residual Generative Adversarial Networks(SRGAN).  
 A minimal Streamlit GUI prototype for enhancement of low-resolution images.
 
